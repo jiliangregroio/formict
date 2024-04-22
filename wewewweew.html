@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+		<style>
+
+
+
+
+
+
+
+
+
+.container{
+  background-color: rgba(100,201,154);
+  padding : 20px;
+  margin : 50px auto;
+  border : 2px solid white;
+  display : grid;
+  width : 70%;
+}
+.splash{
+  cursor : pointer;
+  position : fixed;
+  top : 50%;
+  left : 50%;
+  height : 95%;
+  width : 95%;
+  transform : translate(-50%,-50%);    
+  background-color: rgba(0,0,0);
+  transition : all ease-in-out 600ms;
+}
+.hidden{
+  transition : 0.5s;
+  display : none;
+}
+.splash-header {
+  height : 90%;
+  color : white;
+  font-family : consolas;
+  font-size : 30px;
+  display : flex;
+  justify-content: center;
+  align-items : center;
+}
+
+body {
+  background-color: rgba(200,200,170);
+}
+
+.btn {
+/*   border : none; */
+/*   padding : 10px; */
+/*   position : fixed; */
+  z-index : -1;
+  left : 50%;
+  transform : translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*YEYEYEYEYEYEYE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+			/* ===== Google Font Import - Poppins ===== */
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			body {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #658354;
+			}
+
+			.container {
+				position: relative;
+				max-width: 900px;
+				width: 100%;
+				border-radius: 6px;
+				padding: 30px;
+				margin: 0 15px;
+				background-color: #fff;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.container header {
+				position: relative;
+				font-size: 20px;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.container header::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				height: 3px;
+				width: 27px;
+				border-radius: 8px;
+				background-color: #658354;
+			}
+
+			.container form {
+				position: relative;
+				margin-top: 16px;
+				min-height: 490px;
+				background-color: #fff;
+				overflow: hidden;
+			}
+
+			.container form .form {
+				position: absolute;
+				background-color: #fff;
+				transition: 0.3s ease;
+			}
+
+			.container form .form.second {
+				opacity: 0;
+				pointer-events: none;
+				transform: translateX(100%);
+			}
+
+			form.secActive .form.second {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateX(0);
+			}
+
+			form.secActive .form.first {
+				opacity: 0;
+				pointer-events: none;
+				transform: translateX(-100%);
+			}
+
+			.container form .title {
+				display: block;
+				margin-bottom: 8px;
+				font-size: 16px;
+				font-weight: 500;
+				margin: 6px 0;
+				color: #658354;
+			}
+
+			.container form .fields {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+
+			form .fields .input-field {
+				display: flex;
+				width: calc(100% / 3 - 15px);
+				flex-direction: column;
+				margin: 4px 0;
+			}
+
+			.input-field label {
+				font-size: 12px;
+				font-weight: 500;
+				color: #658354;
+			}
+
+			.input-field input,
+			select {
+				outline: none;
+				font-size: 14px;
+				font-weight: 400;
+				color: #333;
+				border-radius: 5px;
+				border: 1px solid #aaa;
+				padding: 0 15px;
+				height: 42px;
+				margin: 8px 0;
+			}
+
+			.input-field input :focus,
+			.input-field select:focus {
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+			}
+
+			.input-field select,
+			.input-field input[type="date"] {
+				color: #707070;
+			}
+
+			.input-field input[type="date"]:valid {
+				color: #333;
+			}
+
+			.container form button,
+			.backBtn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 45px;
+				max-width: 200px;
+				width: 100%;
+				border: none;
+				outline: none;
+				color: white;
+				border-radius: 5px;
+				margin: 25px 0;
+				background-color: #658354;
+				transition: all 0.3s linear;
+				cursor: pointer;
+			}
+
+			.container form .btnText {
+				font-size: 14px;
+				font-weight: 400;
+			}
+
+			form button:hover {
+				background-color: #265df2;
+			}
+
+			form button i,
+			form .backBtn i {
+				margin: 0 6px;
+			}
+
+			form .backBtn i {
+				transform: rotate(180deg);
+			}
+
+			form .buttons {
+				display: flex;
+				align-items: center;
+			}
+
+			form .buttons button,
+			.backBtn {
+				margin-right: 14px;
+			}
+
+			@media (max-width: 750px) {
+				.container form {
+					overflow-y: scroll;
+				}
+
+				.container form::-webkit-scrollbar {
+					display: none;
+				}
+
+				form .fields .input-field {
+					width: calc(100% / 2 - 15px);
+				}
+			}
+
+			@media (max-width: 550px) {
+				form .fields .input-field {
+					width: 100%;
+				}
+			}
+
+
+
+
+
+
+
+
+
+        
+            
+		</style>
+<head>
+</head>
+<body>
+    <div class="container">
+        <h3>Greetings!</h3>
+        <p>Kindly press the "submit" button to submit your response.</p>
+      
+      
+              <div class="container">
+                  <header>Student Registration Form</header>
+      
+                  <form id="registrationform">
+                      <div class="form first">
+                          <div class="details personal">
+                              <span class="title">Student Information</span>
+      
+                              <div class="fields">
+                                  <div class="input-field">
+                                      <label>Full Name</label>
+                                      <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+                                  </div>
+      
+      <div class="input-field">
+                                      <label>Date of Birth</label>
+                                      <input type="date" id="birth" name="birth" placeholder="Enter date of birth" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Age</label>
+                                      <input type="number" id="age" name="age" placeholder="Enter your Age" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Email</label>
+                                      <input type="text" id="email" name="email" placeholder="Enter email" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Gender</label>
+                                      <select id="gender"id="gender" name="gender" required>
+                                          <option disabled selected>Select gender</option>
+                                          <option>Male</option>
+                                          <option>Female</option>
+                                          <option>Others</option>
+                                      </select>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Crush's name</label>
+                                      <input type="text" id="crush" name="crush" placeholder="Enter your crush's name" required>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <div class="details ID">
+                              <span class="title">Other Information</span>
+      
+                              <div class="fields">
+                                  <div class="input-field">
+                                      <label>School Name</label>
+                                      <input type="text" id="schoolame" name="schoolname" placeholder="Enter School Name" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Class Adviser</label>
+                                      <input type="text" id="adviser" name="adviser" placeholder="Enter CLass Adviser" required>
+                                  </div>
+                                  <div class="input-field">
+                                      <label>Grade Level</label>
+                                      <input type="text" id="grade" name="grade" placeholder="Enter Grade Level" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Section</label>
+                                      <input type="text" id="section" name="section" placeholder="Enter your Section" required>
+                                  </div>
+      
+                                  <div class="input-field">
+                                      <label>Student LRN</label>
+                                      <input type="Text" id="lrn"name="lrn" placeholder="Enter your LRN" required>
+                                  </div>
+                                  <div class="input-field">
+                                      <label>Strand/Course</label>
+                                      <input type="Text" id="strand" name="strand" placeholder="Enter Strand" required>
+                                  </div>
+      
+      
+      
+                                  <div class="buttons">
+                                      <button type="sumbit">
+                                          <span class="btnText">Submit</span>
+                                          <i class="uil uil-navigator"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                  </form>
+              </div>
+      <script>
+              
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+              document.getElementById('regestrationform').addEventListener('submit', function(event) {
+    event.preventDefault().value;
+    
+    const fullname =document.getElementById('fullname').value;
+
+const email =document.getElementById('email').value;
+
+
+const birth =document.getElementById('birth').value;
+
+const gender =document.getElementById('gender').value;
+
+const fathername =document.getElementById('age').value;
+
+const mothername =document.getElementById('crush').value;
+
+const schoolname =document.getElementById('schoolname').value;
+
+const section =document.getElementById('section').value;
+
+const adviser =document.getElementById('adviser').value;
+
+const lrn =document.getElementById('lrn').value;
+
+const grade =document.getElementById('grade').value;
+
+const strand =document.getElementById('strand').value;
+
+    const formData = {
+        fullname:fullname,
+
+email:email,
+
+birth:birth,
+
+gender:gender,
+
+age:age,
+
+crush:crush,
+
+
+schoolname:schoolname,
+
+section:section,
+
+adviser:adviser,
+
+lrn:lrn,
+
+
+grade:grade,
+
+strand:strand
+
+    };
+
+    saveFormData(formData);
+});
+
+function saveFormData(formData) {
+    const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
+
+    storedFormData.push(formData);
+
+    localStorage.setItem('formData', JSON.stringify(storedFormData));
+}
+
+</script>
+
+</div>
+    
+</body>
+</head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
