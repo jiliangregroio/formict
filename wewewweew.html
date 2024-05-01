@@ -1,154 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Application Form</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #00539f;
-        margin: 0;
-        padding: 0;
-    }
+<html>
+    <head>
+        <title>
+            Reg. Form Using local storage js
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+        <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #00539f;
+              margin: 0;
+              padding: 0;
+          }
+      
+          .container {
+              width: 50%;
+              margin: 50px auto;
+              background-color: #ffffffea;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+      
+          h2 {
+              color: #ff9500;
+          }
+      
+          form {
+              margin-top: 20px;
+          }
+      
+          label {
+              display: block;
+              margin-bottom: 5px;
+              color: #333;
+          }
+      
+          input[type="text"], textarea {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+          }
+      
+          input[type="submit"] {
+              background-color: #ffcb00;
+              color: #fff;
+              border: none;
+              padding: 10px 20px;
+              cursor: pointer;
+              border-radius: 5px;
+          }
+      
+          input[type="submit"]:hover {
+              background-color: #e66000;
+          }
+      </style>
 
-    .container {
-        width: 50%;
-        margin: 50px auto;
-        background-color: #ffffffea;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      </head>
+      <body>
+      
+      <div class="container">
+        <h2>Reg. Form</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter email" name="email">
+              </div>
 
-    h2 {
-        color: #ff9500;
-    }
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+    
 
-    form {
-        margin-top: 20px;
-    }
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
+          </div>
 
-    label {
-        display: block;
-        margin-bottom: 5px;
-        color: #333;
-    }
 
-    input[type="text"], textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" class="form-control" id="gender" placeholder="Enter gender" name="gender">
+          </div>
+         
 
-    input[type="submit"] {
-        background-color: #ffcb00;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
 
-    input[type="submit"]:hover {
-        background-color: #e66000;
-    }
-</style>
-</head>
-<body>
 
-<div class="container">
-    <h2>Application Form</h2>
-    <form id="applicationForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+          <div class="form-group">
+            <label for="school">school:</label>
+            <input type="text" class="form-control" id="school" placeholder="Enter scchool" name="school">
+          </div>
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
 
-        <label for="age">Age:</label>
-        <input type="text" id="age" name="age" required>
+          <div class="form-group">
+            <label for="section">section:</label>
+            <input type="text" class="form-control" id="section" placeholder="Enter section" name="section">
+          </div>
 
-        <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" required>
 
-        <label for="school">School Name:</label>
-        <input type="text" id="school" name="school" required>
+          <div class="form-group">
+            <label for="adviser">adviser:</label>
+            <input type="text" class="form-control" id="adviser" placeholder="Enter adviser" name="adviser">
+          </div>
 
-        <label for="adviser">Class Adviser:</label>
-        <input type="text" id="adviser" name="adviser" required>
 
-        <label for="section">Section:</label>
-        <input type="text" id="section" name="section" required>
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required>
+   <div class="form-group">
+            <label for="grade">grade:</label>
+            <input type="text" class="form-control" id="grade" placeholder="Enter grade" name="grade">
+          </div>
 
-        <label for="region">Region:</label>
-        <input type="text" id="region" name="region" required>
 
-        <label for="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+          <div class="form-group">
+            <label for="city">city:</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city" name="city">
+          </div>
 
-        <input type="submit" value="Submit">
-    </form>
-</div>
 
-<script>
-    document.getElementById('applicationForm').addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        // Get form values
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var age = document.getElementById('age').value;
-        var gender = document.getElementById('gender').value;
-        var school = document.getElementById('school').value;
-        var adviser = document.getElementById('adviser').value;
-        var section = document.getElementById('section').value;
-        var city = document.getElementById('city').value;
-        var region = document.getElementById('region').value;
-        var feedback = document.getElementById('feedback').value;
 
-        // Create application object
-        var application = {
-            name: name,
-            email: email,
-            age: age,
-            gender: gender,
-            school: school,
-            adviser: adviser,
-            section: section,
-            city: city,
-            region: region,
-            feedback: feedback
-        };
 
-        // Save application to local storage
-        var applications = JSON.parse(localStorage.getItem('applications')) || [];
-        applications.push(application);
-        localStorage.setItem('applications', JSON.stringify(applications));
 
-        // Optional: Clear form fields after submission
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('age').value = '';
-        document.getElementById('gender').value = '';
-        document.getElementById('school').value = '';
-        document.getElementById('adviser').value = '';
-        document.getElementById('section').value = '';
-        document.getElementById('city').value = '';
-        document.getElementById('region').value = '';
-        document.getElementById('feedback').value = '';
+          <div class="form-group">
+            <label for="region">region:</label>
+            <input type="text" class="form-control" id="region" placeholder="Enter region" name="region">
+          </div>
 
-        alert('Application submitted successfully!');
-    });
-</script>
 
-</body>
-</html>
+
+
+
+
+          <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      
+      </body>
+      <script>
+function saveData()
+
+
+
+{localStorage.getItem('keyOrder');
+let name,email,age,gender,school,section,adviser,grade,city,region;
+name=document.getElementById("name").value;
+email=document.getElementById("email").value;
+age=document.getElementById("age").value;
+gender=document.getElementById("gender").value;
+school=document.getElementById("school").value;
+section=document.getElementById("section").value;
+adviser=document.getElementById("adviser").value;
+grade=document.getElementById("grade").value;
+city=document.getElementById("city").value;
+region=document.getElementById("region").value;
+
+
+localStorage.setItem("name",name)
+localStorage.setItem("email",email)
+localStorage.setItem("age",age)
+localStorage.setItem("gender",gender)
+localStorage.setItem("school",school)
+localStorage.setItem("section",section)
+localStorage.setItem("adviser",adviser)
+localStorage.setItem("grade",grade)
+localStorage.setItem("city",city)
+localStorage.setItem("region",region)
+}
+          </script>
+      </html>
 
 
 
